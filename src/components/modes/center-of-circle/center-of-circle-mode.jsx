@@ -1,7 +1,16 @@
 import React from 'react'
 import Mode from '../_mode'
+import CircleService from './circle-service';
+import MAP_ERANGEL from '../../../resources/images/maps/erangel.jpg';
 
 export default class CenterOfCircleMode extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            backgroundImage: MAP_ERANGEL
+        };
+    }
 
     render() {
         return <Mode 
@@ -14,6 +23,14 @@ export default class CenterOfCircleMode extends React.Component {
             ]}
             advancedFeature={
                 <div>
+                    <CircleService 
+                        height={500}
+                        width={500}
+                        circleStyle={{lineWidth: 3, strokeStyle:"white"}}
+                        pointStyle={{size: 5, fillStyle: "yellow"}}
+                        centerStyle={{lineWidth: 2, strokeStyle: 'red'}}
+                        backgroundImage={this.state.backgroundImage}
+                    />
                 </div>
             }
         />;

@@ -32,7 +32,7 @@ export default class FireEveryMinuteMode extends React.Component {
             ]}
             advancedFeature={
                 <div>
-                    <CyclicTimer cycleSeconds={10} updateRate={200} onZero={this.notify}/>
+                    <CyclicTimer cycleSeconds={60} updateRate={250} onZero={this.notify}/>
                     <LocalAudio source={NOTIFICATION_SOURCE} playStartCallback={this.resetNotify} playWhen={this.state.notify}/>
                 </div>
             }
