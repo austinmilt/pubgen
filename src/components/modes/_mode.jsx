@@ -1,32 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import DisplayNameElement from '../elements/display-name';
 import DescriptionElement from '../elements/description';
 import RulesElement from '../elements/rules';
-import { isArray } from 'util';
 
 export default class Mode extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.validateProps();
-    }
-
-
-    validateProps = () => {
-        if (this.props.displayName === undefined) {
-            throw new Error("Parameter 'displayName' is required for Mode.");
-        }
-        if (this.props.description === undefined) {
-            throw new Error("Parameter 'description' is required for Mode.");
-        }
-        if (this.props.rules === undefined) {
-            throw new Error("Parameter 'rules' is required for Mode.");
-        }
-        if (!isArray(this.props.rules)) {
-            throw new Error("Parameter 'rules' must be an array.");
-        }
-    }
-
 
     render() {
         return <div>
@@ -37,3 +15,10 @@ export default class Mode extends React.Component {
         </div>;
     }
 }
+
+Mode.propTypes = {
+    displayName: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    rules: PropTypes.arrayOf(PropTypes.string).isRequired,
+    advancedFeature: PropTypes.any
+};
