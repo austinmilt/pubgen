@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class LocalAudio extends React.Component {
 
@@ -17,7 +18,9 @@ export default class LocalAudio extends React.Component {
 
     play = () => {
         this.audio.current.play();
-        this.props.playStartCallback();
+        if (this.props.playStartCallback) {
+            this.props.playStartCallback();
+        }
     }
 
 
@@ -28,3 +31,9 @@ export default class LocalAudio extends React.Component {
         </audio>;
     }
 }
+
+LocalAudio.propTypes = {
+    playWhen: PropTypes.bool.isRequired,
+    playStartCallback: PropTypes.func,
+    source: PropTypes.string.isRequired
+};

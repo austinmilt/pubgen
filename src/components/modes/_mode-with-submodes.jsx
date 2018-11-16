@@ -1,5 +1,6 @@
 import React from 'react';
 import Mode from './_mode';
+import PropTypes from 'prop-types';
 
 export default class ModeWithSubmodes extends React.Component {
 
@@ -28,3 +29,10 @@ export default class ModeWithSubmodes extends React.Component {
     }
 
 }
+
+ModeWithSubmodes.propTypes = {
+    displayName: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    rules: PropTypes.arrayOf(PropTypes.string).isRequired,
+    submodes: PropTypes.any // change to array of something
+};

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 export default class RulesElement extends React.Component {
 
@@ -19,3 +20,7 @@ export default class RulesElement extends React.Component {
         </div>;
     }
 }
+
+RulesElement.propTypes = {
+    rules: PropTypes.arrayOf(PropTypes.string).isRequired
+};

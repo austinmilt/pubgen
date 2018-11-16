@@ -1,5 +1,6 @@
 import React from 'react'
-import MinorElement from './_minor-element'
+import MinorElement from './_minor-element';
+import PropTypes from 'prop-types';
 
 const style={color: 'green'};
 
@@ -12,3 +13,7 @@ export default class DescriptionElement extends React.Component {
         </div>
     }
 }
+
+DescriptionElement.propTypes = {
+    description: PropTypes.string.isRequired,
+};

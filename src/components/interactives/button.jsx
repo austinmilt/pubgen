@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const style = {
     fontSize: "20px",
@@ -19,3 +20,8 @@ export default class Button extends React.Component {
   }
 
 }
+
+Button.propTypes = {
+  buttonText: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
+};

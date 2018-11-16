@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 export default class MinorElement extends React.Component {
 
@@ -7,3 +8,8 @@ export default class MinorElement extends React.Component {
   }
 
 }
+
+MinorElement.propTypes = {
+  style: PropTypes.any,
+  text: PropTypes.string
+};

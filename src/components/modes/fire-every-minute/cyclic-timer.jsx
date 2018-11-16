@@ -1,5 +1,6 @@
 import React from 'react';
 import { isNull } from 'util';
+import PropTypes from 'prop-types';
 
 const clockStyle = {
     color: '#17D4FE',
@@ -116,3 +117,9 @@ export default class CyclicTimer extends React.Component {
         return <div style={clockStyle} onClick={this.onClick}>{this.state.clockString}</div>;
     }
 }
+
+CyclicTimer.propTypes = {
+    cycleSeconds: PropTypes.number.isRequired,
+    updateRate: PropTypes.number.isRequired,
+    onZero: PropTypes.func.isRequired
+};
