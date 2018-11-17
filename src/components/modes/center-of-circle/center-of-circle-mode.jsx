@@ -36,8 +36,8 @@ export default class CenterOfCircleMode extends React.Component {
 
     constructCircleService = (chosenMap) => {
         return <CircleService 
-            height={600}
-            width={600}
+            height={800}
+            width={800}
             circleStyle={{lineWidth: 3, strokeStyle:"white"}}
             pointStyle={{size: 5, fillStyle: "yellow"}}
             centerStyle={{lineWidth: 2, strokeStyle: 'red'}}
