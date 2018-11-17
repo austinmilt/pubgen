@@ -407,6 +407,8 @@ export default class CircleService extends React.Component {
                 src={this.props.backgroundImage}
                 alt="display missing"
                 style={Object.assign({display: 'inline-block', margin: 'auto'}, CANVAS_STYLE)}
+                height={this.props.height}
+                width={this.props.width}
             />
             <canvas 
                 ref={this.circleCanvas} 
