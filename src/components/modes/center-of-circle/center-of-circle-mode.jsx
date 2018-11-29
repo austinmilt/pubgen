@@ -38,9 +38,6 @@ export default class CenterOfCircleMode extends React.Component {
         return <CircleService 
             height={800}
             width={800}
-            circleStyle={{lineWidth: 3, strokeStyle:"white"}}
-            pointStyle={{size: 5, fillStyle: "yellow"}}
-            centerStyle={{lineWidth: 2, strokeStyle: 'red'}}
             backgroundImage={chosenMap}
         />;
     }
@@ -71,7 +68,7 @@ export default class CenterOfCircleMode extends React.Component {
                 "Each time the circle changes, you must immediately start moving toward the new center.",
                 "You may be anywhere within a one-block (100 meter) radius around the center block."
             ]}
-            advancedFeature={<div>{this.state.mapState}</div>}
+            advancedFeature={this.state.mapState}
         />;
     }
 }

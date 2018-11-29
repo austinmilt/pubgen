@@ -1,0 +1,4 @@
+.coc-map-choice:hover {
+    transform: 'scale(1.25)';
+    transition-duration: '300ms';
+}

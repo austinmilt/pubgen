@@ -12,7 +12,7 @@ export default class RulesElement extends React.Component {
     }
 
     render() {
-        return <div>
+        return <div style={this.props.style}>
             Rules:
             <div>
                 {this.formatRules(this.props.rules)}
@@ -22,5 +22,6 @@ export default class RulesElement extends React.Component {
 }
 
 RulesElement.propTypes = {
-    rules: PropTypes.arrayOf(PropTypes.string).isRequired
+    rules: PropTypes.arrayOf(PropTypes.string).isRequired,
+    style: PropTypes.object
 };

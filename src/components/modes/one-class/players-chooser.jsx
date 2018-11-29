@@ -8,6 +8,7 @@ export default class PlayersChooser extends React.Component {
             <p>
                 <button onClick={() => this.props.onClick(1)}>1</button> 
                 <button onClick={() => this.props.onClick(2)}>2</button> 
+                <button onClick={() => this.props.onClick(3)}>3</button> 
                 <button onClick={() => this.props.onClick(4)}>4</button> 
                 <button onClick={() => this.props.onClick(8)}>8</button> 
             </p>

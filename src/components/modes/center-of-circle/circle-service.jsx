@@ -22,8 +22,6 @@ const DEFAULT_DIV_STYLE = {
     left: 0,
     top: 0,
     border: '2px solid black',
-    // padding: 0,
-    // margin: 0,
     overflow: 'hidden'
 }
 
@@ -31,10 +29,9 @@ const CANVAS_STYLE = {
     position: "absolute",
     left: 0,
     top: 0,
-    // margin: 0,
 };
 
-const IMAGE_STYLE = {};
+const IMAGE_STYLE = Object.assign({display: 'inline-block', margin: 'auto'}, CANVAS_STYLE);
 
 const PREVENT_CONTEXT_MENU = true;
 const CALCULATOR = new Calculator();
@@ -394,6 +391,7 @@ export default class CircleService extends React.Component {
         divStyle.height = this.props.height;
         divStyle.position = 'relative';
         return <div 
+            className='circle-service-container'
             style={divStyle} 
             onWheel={this.onWheel} 
             onContextMenu={this.onContextMenu}
@@ -406,9 +404,10 @@ export default class CircleService extends React.Component {
                 ref={this.map}
                 src={this.props.backgroundImage}
                 alt="display missing"
-                style={Object.assign({display: 'inline-block', margin: 'auto'}, CANVAS_STYLE)}
+                style={IMAGE_STYLE}
                 height={this.props.height}
                 width={this.props.width}
+                className='circle-service-map'
             />
             <canvas 
                 ref={this.circleCanvas} 
@@ -416,6 +415,7 @@ export default class CircleService extends React.Component {
                 style={CANVAS_STYLE}
                 height={this.props.height}
                 width={this.props.width}
+                className='circle-service-circle'
             />
             <canvas
                 ref={this.pointsCanvas}
@@ -423,6 +423,7 @@ export default class CircleService extends React.Component {
                 style={CANVAS_STYLE}
                 height={this.props.height}
                 width={this.props.width}
+                className='circle-service-points'
             />
             <canvas
                 ref={this.centerCanvas}
@@ -430,6 +431,7 @@ export default class CircleService extends React.Component {
                 style={CANVAS_STYLE}
                 height={this.props.height}
                 width={this.props.width}
+                className='circle-service-center'
             />
         </div>;
     }

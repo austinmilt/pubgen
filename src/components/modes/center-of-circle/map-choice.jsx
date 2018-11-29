@@ -1,6 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './center-of-circle.css';
+// import './center-of-circle.css';
+
+
+const DEFAULT_STYLE =  {
+    background: '#46BAAF',
+    border: '3px solid black'
+};
+
+const HOVER_ANIMATION = {
+    transform: 'scale(1.25)',
+    transitionDuration: '300ms'
+}
 
 
 export default class MapChoice extends React.Component {
@@ -12,7 +23,8 @@ export default class MapChoice extends React.Component {
             height={this.props.height} 
             width={this.props.width}
             onClick={this.props.onClick}
-            className="mapChoice"
+            className="coc-map-choice"
+            style = {DEFAULT_STYLE}
         />;
     }
 }
