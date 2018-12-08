@@ -54,7 +54,7 @@ export default class CenterOfCircleMode extends React.Component {
             choices={THUMB_PARAMS}
             onClick={(mapKey) => {this.onMapSelection(mapKey);}}
             height={200}
-            width={600}
+            width={200}
         />;
     }
 

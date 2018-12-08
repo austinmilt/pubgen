@@ -11,7 +11,7 @@ import OneClassMode from './modes/one-class/one-class-mode';
 import FireEveryMinuteMode from './modes/fire-every-minute/fire-every-minute-mode';
 import CenterOfCircleMode from './modes/center-of-circle/center-of-circle-mode';
 
-const CYCLE_MODES = false;
+const CYCLE_MODES = true;
 
 const MODES = [
     FirstGunMode, ProneOnlyMode, DestroyAllMode, AlwaysInVehicleMode, 

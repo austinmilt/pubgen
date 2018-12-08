@@ -5,13 +5,10 @@ import PropTypes from 'prop-types';
 export default class DisplayNameElement extends React.Component {
 
     render() {
-        return <div>
-            Display Name: <MinorElement text={this.props.name} style={this.props.style}/>
-        </div>
+        return <MinorElement text={this.props.name}/>
     }
 }
 
 DisplayNameElement.propTypes = {
     name: PropTypes.string.isRequired,
-    style: PropTypes.object
 };

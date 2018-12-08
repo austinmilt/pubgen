@@ -1,9 +1,0 @@
-.mapChoice {
-    background: #46BAAF;
-    border: 3px solid black;
-}
-
-.mapChoice:hover {
-    transform: scale(1.25);
-    transition-duration: 300ms;
-}

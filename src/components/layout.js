@@ -27,7 +27,7 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: 'sample, something' },
           ]}
         >
-          <html lang="en" />
+        <html lang="en"/>
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div

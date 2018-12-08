@@ -1,21 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import style from 'styled-components';
+import styled from 'styled-components';
 
-// export default MinorElement`
-    
-// `;
-
+const MinorElementStyle = styled.h1`
+    color: white;
+    font-size: 2em;
+    font-weight: normal;
+    font-family: 'Chakra Petch', sans-serif;
+`;
 
 export default class MinorElement extends React.Component {
   
   render() {
-    return <h1 style={this.props.style}>{this.props.text}</h1>;
+    return <MinorElementStyle>{this.props.text}</MinorElementStyle>;
   }
 
 }
 
 MinorElement.propTypes = {
-    style: PropTypes.object,
     text: PropTypes.string
 };

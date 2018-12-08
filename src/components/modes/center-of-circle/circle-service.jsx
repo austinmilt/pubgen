@@ -99,7 +99,7 @@ export default class CircleService extends React.Component {
 
         // style the circle
         let lineWidth;
-        if (this.props.circleStyle.lineWidth) {
+        if (this.props.circleStyle && this.props.circleStyle.lineWidth) {
             lineWidth = this.props.circleStyle.lineWidth;
         }
         else {
@@ -107,7 +107,7 @@ export default class CircleService extends React.Component {
         }
 
         let strokeStyle;
-        if (this.props.circleStyle.strokeStyle) {
+        if (this.props.circleStyle && this.props.circleStyle.strokeStyle) {
             strokeStyle = this.props.circleStyle.strokeStyle;
         }
         else {
@@ -146,7 +146,7 @@ export default class CircleService extends React.Component {
         
         // get point properties
         let size;
-        if (this.props.pointStyle.size) {
+        if (this.props && this.props.pointStyle && this.props.pointStyle.size) {
             size = this.props.pointStyle.size;
         }
         else { 
@@ -154,7 +154,7 @@ export default class CircleService extends React.Component {
         }
 
         let fillStyle;
-        if (this.props.pointStyle.fillStyle) {
+        if (this.props.pointStyle && this.props.pointStyle.fillStyle) {
             fillStyle = this.props.pointStyle.fillStyle;
         }
         else { 
@@ -191,7 +191,7 @@ export default class CircleService extends React.Component {
 
         // style the circle
         let lineWidth;
-        if (this.props.centerStyle.lineWidth) {
+        if (this.props.centerStyle && this.props.centerStyle.lineWidth) {
             lineWidth = this.props.centerStyle.lineWidth;
         }
         else {
@@ -199,7 +199,7 @@ export default class CircleService extends React.Component {
         }
 
         let strokeStyle;
-        if (this.props.centerStyle.strokeStyle) {
+        if (this.props.centerStyle && this.props.centerStyle.strokeStyle) {
             strokeStyle = this.props.centerStyle.strokeStyle;
         }
         else {
